@@ -9,13 +9,14 @@ import XCTest
 
 final class RegistrationUITests: TestCase {
     
-    private let correctLogin = UUID.randomPart
     private let correctPassword = "12345"
-    private let incorrectLogin = "stage"
 
     //TODO разобратся почему после закрытия симулятора, нужно провести махинации с настройкой клавы в симуляторе чтобы можно было корректно вставить значения в поля 
     
     func test_registrationSuccess() throws {
+        
+        let correctLogin = UUID.randomPart
+        
         launchAppWithoutLogin()
 
         loginPage
@@ -26,6 +27,9 @@ final class RegistrationUITests: TestCase {
     }
     
     func test_registrationFailure() throws {
+        
+        let incorrectLogin = "stage"
+        
         launchAppWithoutLogin()
         
         loginPage
