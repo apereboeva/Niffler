@@ -152,6 +152,7 @@ extension DetailSpendView {
         }) {
             Text(editSpendView == nil ? "Add" : "Edit")
                 .padding(.horizontal, 16)
+                .accessibilityIdentifier(DetailSpendViewIDs.addButton.rawValue)
         }
         .font(.headline)
         .buttonStyle(.borderedProminent)

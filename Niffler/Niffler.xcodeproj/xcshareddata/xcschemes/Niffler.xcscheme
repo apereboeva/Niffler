@@ -56,6 +56,17 @@
                ReferencedContainer = "container:Niffler.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "53A0B1FF2D76DE8A003B0B17"
+               BuildableName = "E2EUITests.xctest"
+               BlueprintName = "E2EUITests"
+               ReferencedContainer = "container:Niffler.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

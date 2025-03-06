@@ -79,6 +79,7 @@ extension LoginView {
                     .onTapGesture {
                         self.isSignUpPresented = true
                     }
+                    .accessibilityIdentifier(LoginViewIDs.createAccountButton.rawValue)
             }.sheet(isPresented: $isSignUpPresented, content: {
                 SignUpView(username: $username,
                            password: $password,

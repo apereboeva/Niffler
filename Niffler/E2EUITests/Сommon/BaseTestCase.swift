@@ -1,3 +1,10 @@
+//
+//  BaseTestCase.swift
+//  Niffler
+//
+//  Created by Анна Перебоева on 04.03.2025.
+//
+
 import XCTest
 
 class TestCase: XCTestCase {
@@ -15,7 +22,6 @@ class TestCase: XCTestCase {
         
         loginPage = nil
         spendsPage = nil
-        newSpendPage = nil
         
         super.tearDown()
     }
@@ -28,7 +34,8 @@ class TestCase: XCTestCase {
     }
     
     lazy var loginPage: LoginPage! = LoginPage(app: app)
+    lazy var registrationPage: RegistrationPage! = RegistrationPage(app: app)
     lazy var spendsPage: SpendsPage! = SpendsPage(app: app)
-    lazy var newSpendPage: NewSpendPage! = NewSpendPage(app: app)
 }
+
 

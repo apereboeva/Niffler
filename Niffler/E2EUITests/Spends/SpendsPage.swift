@@ -1,3 +1,10 @@
+//
+//  SpendsPage.swift
+//  Niffler
+//
+//  Created by Анна Перебоева on 06.03.2025.
+//
+
 import XCTest
 
 class SpendsPage: BasePage {
@@ -23,17 +30,5 @@ class SpendsPage: BasePage {
         
         return self
     }
-    
-    func addSpent() {
-        app.buttons["addSpendButton"].tap()
-    }
-    
-    func assertNewSpendIsShown(title: String, file: StaticString = #filePath, line: UInt = #line) {
-        let isFound = app.firstMatch
-            .scrollViews.firstMatch
-            .staticTexts[title].firstMatch
-            .waitForExistence(timeout: 1)
-        
-        XCTAssertTrue(isFound, file: file, line: line)
-    }
 }
+
