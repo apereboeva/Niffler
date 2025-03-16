@@ -13,7 +13,7 @@ final class RegistrationUITests: TestCase {
 
     //TODO разобратся почему после закрытия симулятора, нужно провести махинации с настройкой клавы в симуляторе чтобы можно было корректно вставить значения в поля 
     
-    func test_registrationSuccess() throws {
+    func testRegistrationSuccess() throws {
         
         let correctLogin = UUID.randomPart
         
@@ -26,7 +26,7 @@ final class RegistrationUITests: TestCase {
             .pressloginButton()
     }
     
-    func test_registrationFailure() throws {
+    func testRegistrationFailure() throws {
         
         let incorrectLogin = "stage"
         

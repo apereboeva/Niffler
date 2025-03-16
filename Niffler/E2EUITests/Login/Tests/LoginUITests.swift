@@ -9,11 +9,10 @@ import XCTest
 
 final class LoginUITests: TestCase {
     
-    private let correctLogin = "stage"
-    private let correctPassword = "12345"
-    private let incorrectPassword = "1"
-    
-    func test_loginSuccess() throws {
+    func testLoginSuccess() throws {
+         let correctLogin = "stage"
+         let correctPassword = "12345"
+        
         launchAppWithoutLogin()
 
         loginPage
@@ -23,7 +22,10 @@ final class LoginUITests: TestCase {
             .assertIsSpendsViewAppeared()
     }
     
-    func test_loginFailure() throws {
+    func testLoginFailure() throws {
+         let correctLogin = "stage"
+         let incorrectPassword = "1"
+        
         launchAppWithoutLogin()
         
         loginPage

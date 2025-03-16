@@ -7,7 +7,7 @@
 
 import XCTest
 
-class SpendsPage: BasePage {
+final class SpendsPage: BasePage {
     func assertIsSpendsViewAppeared(file: StaticString = #filePath, line: UInt = #line) {
         XCTContext.runActivity(named: "Жду экран с тратами") { _ in
             waitSpendsScreen(file: file, line: line)

@@ -7,11 +7,11 @@
 
 import XCTest
 
-private enum Constants {
-    static let authorizationError = "Нет такого пользователя. Попробуйте другие данные"
-}
 
-class LoginPage: BasePage {
+
+final class LoginPage: BasePage {
+    
+    let authorizationError = "Нет такого пользователя. Попробуйте другие данные"
     
     @discardableResult
     func input(login: String, password: String) -> Self {
@@ -44,6 +44,7 @@ class LoginPage: BasePage {
             }
             passwordTextField.tap()
             passwordTextField.typeText(password)
+            app.keyboards.buttons["Return"].tap()
         }
     }
     
@@ -57,7 +58,7 @@ class LoginPage: BasePage {
         XCTContext.runActivity(named: "Жду сообщение с ошибкой") { _ in
             let authorizationError = app.staticTexts["LoginError"]
             XCTAssertTrue(authorizationError.waitForExistence(timeout: 5), "Не нашли сообщение о неудачной авторизации", file: file, line: line)
-            XCTAssertEqual(authorizationError.label, Constants.authorizationError, file: file, line: line)
+            XCTAssertEqual(authorizationError.label, self.authorizationError, file: file, line: line)
         }
     }
     

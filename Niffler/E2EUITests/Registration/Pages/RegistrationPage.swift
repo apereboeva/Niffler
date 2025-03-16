@@ -7,11 +7,11 @@
 
 import XCTest
 
-private enum Constants {
-    static let registrationError = "Не удалось создать пользователя"
-}
 
-class RegistrationPage: BasePage {
+
+final class RegistrationPage: BasePage {
+    
+     let registrationError = "Не удалось создать пользователя"
         
     @discardableResult
     func input(login: String, password: String, confirmPassword: String) -> Self {
@@ -78,7 +78,7 @@ class RegistrationPage: BasePage {
         XCTContext.runActivity(named: "Жду сообщение с ошибкой") { _ in
             let registrationError = app.staticTexts["LoginError"]
             XCTAssertTrue(registrationError.waitForExistence(timeout: 5), "Не нашли сообщение о неудачной регистрации", file: file, line: line)
-            XCTAssertEqual(registrationError.label, Constants.registrationError, "Значение  \(registrationError.label) не соотвествует \(Constants.registrationError)", file: file, line: line)
+            XCTAssertEqual(registrationError.label, self.registrationError, "Значение  \(registrationError.label) не соотвествует \(self.registrationError)", file: file, line: line)
         }
     }
     
