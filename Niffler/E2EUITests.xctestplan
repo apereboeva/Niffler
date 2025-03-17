@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "54CE0FFB-759D-4066-83E7-0FA32546C0EB",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "selectedTests" : [
+        "LoginUITests\/testLoginFailure()",
+        "LoginUITests\/testLoginSuccess()",
+        "RegistrationUITests\/testRegistrationFailure()",
+        "RegistrationUITests\/testRegistrationSuccess()"
+      ],
+      "target" : {
+        "containerPath" : "container:Niffler.xcodeproj",
+        "identifier" : "53A0B1FF2D76DE8A003B0B17",
+        "name" : "E2EUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
