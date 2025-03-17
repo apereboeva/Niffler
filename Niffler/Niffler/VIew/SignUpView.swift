@@ -55,7 +55,7 @@ extension SignUpView {
                     .background(Color(UIColor.systemGray6))
                     .cornerRadius(8)
                     .padding(.bottom, 20)
-                    .accessibilityIdentifier(SignUpViewIDs.userNameTextField.rawValue)
+                    .accessibilityIdentifier(SignUpViewIDs.userNameSignUpTextField.rawValue)
 
                 Text("Password")
                 PasswordField(
@@ -64,7 +64,7 @@ extension SignUpView {
                     isSecured: isSecuredPassword,
                     onPress: { self.isSecuredPassword.toggle() }
                 )
-                .accessibilityIdentifier(SignUpViewIDs.passwordTextField.rawValue)
+                .accessibilityIdentifier(SignUpViewIDs.passwordSignUpTextField.rawValue)
 
                 Text("Confirm password")
                 PasswordField(
@@ -103,6 +103,7 @@ extension SignUpView {
                 } label: {
                     Text("Log in")
                 }
+                .accessibilityIdentifier(SignUpViewIDs.successfulRegistrationloginButton.rawValue)
                 
             } message: {
                 Text(" You've registered!")
@@ -112,6 +113,7 @@ extension SignUpView {
                 Text(errorText)
                     .font(.caption2)
                     .foregroundStyle(.red)
+                    .accessibilityIdentifier(SignUpViewIDs.LoginError.rawValue)
             }
         }
         .interactiveDismissDisabled()
@@ -147,5 +149,6 @@ extension SignUpView {
         }
         .disabled(isSignUpSuccessful)
         .padding(.horizontal, 20)
+        .accessibilityIdentifier(SignUpViewIDs.signUpButton.rawValue)
     }
 }
