@@ -10,7 +10,7 @@ on:
         type: boolean
 
 env:
-  PROJECT: 'Niffler.xcodeproj'
+  PROJECT: 'Niffler/Niffler.xcodeproj'
   SCHEME: 'E2EUITests'
   DERIVED_DATA_PATH: 'DerivedData'
   TEST_RESULTS: './TestResults.xcresult'
