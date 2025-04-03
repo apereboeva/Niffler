@@ -15,10 +15,14 @@
     {
       "parallelizable" : true,
       "selectedTests" : [
+        "LoginUITests\/testGoLoginFromRegistrationScreen()",
         "LoginUITests\/testLoginFailure()",
         "LoginUITests\/testLoginSuccess()",
         "RegistrationUITests\/testRegistrationFailure()",
-        "RegistrationUITests\/testRegistrationSuccess()"
+        "RegistrationUITests\/testRegistrationSuccess()",
+        "SpendsUITests\/testAddSpend()",
+        "SpendsUITests\/testCheckAddingUpSpends()",
+        "SpendsUITests\/testEditSpend()"
       ],
       "target" : {
         "containerPath" : "container:Niffler.xcodeproj",

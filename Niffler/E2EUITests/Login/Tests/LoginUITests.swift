@@ -10,6 +10,13 @@ import XCTest
 final class LoginUITests: TestCase {
     
     func testLoginSuccess() throws {
+        name("Открытие ссылки - matthewfetcher.com")
+        description("Логин успешен")
+        owner("b.lysikov")
+        epic("Экран инфор Радио")
+        feature("Ссылка на сайт")
+        story("Открытие ссылки")
+        tags(["tag1", "tag2"])
          let correctLogin = "stage"
          let correctPassword = "12345"
         
@@ -32,4 +39,14 @@ final class LoginUITests: TestCase {
             .input(login: correctLogin, password: incorrectPassword)
             .assertIsLoginErrorShown()
     }
+    
+//    func testGoLoginFromRegistrationScreen() throws {
+//        
+//        launchAppWithoutLogin()
+//        
+//        loginPage
+//            .openRegistrationScreen()
+//        registrationPage
+//            .
+//    }
 }

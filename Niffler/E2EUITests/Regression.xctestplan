@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "38E0A95F-A301-4C3C-8221-0ACFFDC4E1C3",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Niffler.xcodeproj",
+        "identifier" : "53A0B1FF2D76DE8A003B0B17",
+        "name" : "E2EUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

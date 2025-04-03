@@ -42,6 +42,7 @@ struct SpendCell: View {
 
             Image("ic_edit")
                 .foregroundStyle(AppColors.gray_700)
+                .accessibilityIdentifier(SpendsViewIDs.editIcon.rawValue)
         }
         .padding(.trailing, 16)
         .accessibilityElement(children: .ignore)

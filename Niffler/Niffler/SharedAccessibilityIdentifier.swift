@@ -17,6 +17,7 @@ enum LoginViewIDs: String {
 enum SpendsViewIDs: String {
     case spendsList = "spendsList"
     case addSpendButton = "addSpendButton"
+    case editIcon = "editIcon"
 }
 
 enum SignUpViewIDs: String {
@@ -31,7 +32,10 @@ enum SignUpViewIDs: String {
 enum StatisticViewIDs: String {
     case statisticsTitleText = "statisticsTitleText"
 }
-
-enum DetailSpendViewIDs: String {
+    
+enum NewSpendViewIDs: String {
+    case amountField = "amountField"
+    case descriptionField = "descriptionField"
     case addButton = "addButton"
 }
+

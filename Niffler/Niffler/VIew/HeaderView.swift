@@ -65,6 +65,7 @@ extension HeaderView {
                     .overlay {
                         Image("ic_plus")
                             .padding()
+                            .accessibilityIdentifier(SpendsViewIDs.addSpendButton.rawValue)
                     }
             }
         }
@@ -74,7 +75,6 @@ extension HeaderView {
                 self.isPresentAddSpendView = false
             })
         })
-        .accessibilityIdentifier(SpendsViewIDs.addSpendButton.rawValue)
     }
 }
 

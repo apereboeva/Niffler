@@ -76,7 +76,7 @@ extension DetailSpendView {
                 TextField("amount", text: $amount)
                     .font(.system(size: 80, weight: .bold, design: .monospaced))
                     .multilineTextAlignment(.center)
-                    .accessibilityIdentifier("amountField")
+                    .accessibilityIdentifier(NewSpendViewIDs.amountField.rawValue)
                 .keyboardType(.numberPad)
                 .frame(maxWidth: .infinity)
                 .focused($keyboardFocused)
@@ -99,6 +99,7 @@ extension DetailSpendView {
                     .datePickerStyle(.graphical)
                     .background(.background, in: .rect(cornerRadius: 10))
                     .padding(.top, 50)
+                    .accessibilityIdentifier(NewSpendViewIDs.descriptionField.rawValue)
             }
         }
         .navigationTitle("\(editSpendView == nil ? "New" : "Edit") Spend")
@@ -152,7 +153,7 @@ extension DetailSpendView {
         }) {
             Text(editSpendView == nil ? "Add" : "Edit")
                 .padding(.horizontal, 16)
-                .accessibilityIdentifier(DetailSpendViewIDs.addButton.rawValue)
+                .accessibilityIdentifier(NewSpendViewIDs.addButton.rawValue)
         }
         .font(.headline)
         .buttonStyle(.borderedProminent)

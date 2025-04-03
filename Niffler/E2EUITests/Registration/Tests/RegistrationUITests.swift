@@ -15,7 +15,7 @@ final class RegistrationUITests: TestCase {
     
     func testRegistrationSuccess() throws {
         
-        let correctLogin = UUID.randomPart
+        let correctLogin = UUID.random
         
         launchAppWithoutLogin()
 
@@ -37,11 +37,5 @@ final class RegistrationUITests: TestCase {
         registrationPage
             .input(login: incorrectLogin, password: correctPassword, confirmPassword: correctPassword)
             .assertIsRegistrationErrorShown()
-    }
-}
-
-extension UUID {
-    static var randomPart: String {
-        UUID().uuidString.components(separatedBy: "-").first!
     }
 }
