@@ -14,11 +14,11 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:E2EUITests/Regression.xctestplan"
+            reference = "container:E2EUITests/Test plans/Regression.xctestplan"
             default = "YES">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:E2EUITests/Smoke.xctestplan">
+            reference = "container:E2EUITests/Test plans/Smoke.xctestplan">
          </TestPlanReference>
       </TestPlans>
       <Testables>
