@@ -20,7 +20,7 @@ env:
   DERIVED_DATA_PATH: 'DerivedData'
   TEST_RESULTS: './TestResults.xcresult'
   ALLURE_RESULTS: 'allure-results'
-  SIMULATOR_VERSION: '18.3.1'
+  SIMULATOR_VERSION: '18.0'
   SIMULATOR_NAME: 'iPhone 16'
 
 jobs:
@@ -83,13 +83,13 @@ jobs:
         run: |
           if [ -z "${{ github.event.inputs.test_plan_type }}" ]; then
             xcodebuild test-without-building \
-            -xctestrun DerivedData/Build/Products/E2EUITests_Regression_iphonesimulator18.3.1-arm64.xctestrun \
+            -xctestrun Build/Products/E2EUITests_Regression_iphonesimulator18.0-arm64.xctestrun \
             -destination 'platform=iOS Simulator,name=${{ env.SIMULATOR_NAME }},OS=${{ env.SIMULATOR_VERSION }}' \
             -resultBundlePath ./TestResults.xcresult \
             | xcbeautify --renderer github-actions
           else
             xcodebuild test-without-building \
-            -xctestrun DerivedData/Build/Products/E2EUITests_${{ github.event.inputs.test_plan_type }}_iphonesimulator18.3.1-arm64.xctestrun \
+            -xctestrun Products/E2EUITests_${{ github.event.inputs.test_plan_type }}_iphonesimulator18.0-arm64.xctestrun \
             -destination 'platform=iOS Simulator,name=${{ env.SIMULATOR_NAME }},OS=${{ env.SIMULATOR_VERSION }}' \
             -resultBundlePath ./TestResults.xcresult \
             | xcbeautify --renderer github-actions
