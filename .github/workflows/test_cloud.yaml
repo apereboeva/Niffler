@@ -81,15 +81,17 @@ jobs:
 
       - name: Run Ui Tests
         run: |
+          pwd
+          ls -la
           if [ -z "${{ github.event.inputs.test_plan_type }}" ]; then
             xcodebuild test-without-building \
-            -xctestrun Build/Products/E2EUITests_Regression_iphonesimulator18.2-arm64.xctestrun \
+            -xctestrun Build/Products/E2EUITests_Regression_iphonesimulator18.0-arm64.xctestrun \
             -destination 'platform=iOS Simulator,name=${{ env.SIMULATOR_NAME }},OS=${{ env.SIMULATOR_VERSION }}' \
             -resultBundlePath ./TestResults.xcresult \
             | xcbeautify --renderer github-actions
           else
             xcodebuild test-without-building \
-            -xctestrun Products/E2EUITests_${{ github.event.inputs.test_plan_type }}_iphonesimulator18.2-arm64.xctestrun \
+            -xctestrun Products/E2EUITests_${{ github.event.inputs.test_plan_type }}_iphonesimulator18.0-arm64.xctestrun \
             -destination 'platform=iOS Simulator,name=${{ env.SIMULATOR_NAME }},OS=${{ env.SIMULATOR_VERSION }}' \
             -resultBundlePath ./TestResults.xcresult \
             | xcbeautify --renderer github-actions
