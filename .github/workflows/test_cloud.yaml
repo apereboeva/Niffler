@@ -24,52 +24,13 @@ env:
   SIMULATOR_NAME: 'iPhone 16'
 
 jobs:
-  build:
-    name: Build
-    runs-on: [macos-15]
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Build Project
-        id: build
-        run: |
-          set -o pipefail
-          xcodebuild build-for-testing \
-          -project ${{ env.PROJECT }} \
-          -scheme ${{ env.SCHEME }} \
-          -derivedDataPath ${{ env.DERIVED_DATA_PATH }} \
-          -destination 'platform=iOS Simulator,name=${{ env.SIMULATOR_NAME }},OS=${{ env.SIMULATOR_VERSION }}' \
-          CODE_SIGNING_ALLOWED='NO' \
-          | xcbeautify --renderer github-actions
-          
-          mkdir TestData
-          patterns=("*.xctest" "*.app" "*.xctestrun" "*.framework" "*.bundle")
-          for pattern in "${patterns[@]}"; do 
-            find "${{ env.DERIVED_DATA_PATH }}" -name "$pattern" -print | pax -rw -pe "TestData"; 
-          done
-          echo "artifacts_path=TestData/${{ env.DERIVED_DATA_PATH }}" >> $GITHUB_OUTPUT
-
-      - uses: actions/upload-artifact@v4
-        with:
-          path: ${{ steps.build.outputs.artifacts_path }}
-          name: TestData
-          retention-days: 30
-
   test:
-    name: Run tests
+    name: test
     runs-on: [macos-15]
-    needs: build
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - uses: actions/download-artifact@v4
-        with:
-          name: TestData
-          path: ${{ env.DERIVED_DATA_PATH }}
 
       - name: Download Allure Parser of XCResults
         run: |
@@ -80,21 +41,17 @@ jobs:
         run: brew install allure
 
       - name: Run Ui Tests
+        id: test
         run: |
-          if [ -z "${{ github.event.inputs.test_plan_type }}" ]; then
-            xcodebuild test-without-building \
-            -xctestrun DerivedData/Build/Products/E2EUITests_Regression_iphonesimulator18.0-arm64.xctestrun \
-            -destination 'platform=iOS Simulator,name=${{ env.SIMULATOR_NAME }},OS=${{ env.SIMULATOR_VERSION }}' \
-            -resultBundlePath ./TestResults.xcresult \
-            | xcbeautify --renderer github-actions
-          else
-            xcodebuild test-without-building \
-            -xctestrun DerivedData/Products/E2EUITests_${{ github.event.inputs.test_plan_type }}_iphonesimulator18.0-arm64.xctestrun \
-            -destination 'platform=iOS Simulator,name=${{ env.SIMULATOR_NAME }},OS=${{ env.SIMULATOR_VERSION }}' \
-            -resultBundlePath ./TestResults.xcresult \
-            | xcbeautify --renderer github-actions
-          fi
-        continue-on-error: true
+          set -o pipefail
+          xcodebuild test \
+          -project ${{ env.PROJECT }} \
+          -scheme ${{ env.SCHEME }} \
+          -derivedDataPath ${{ env.DERIVED_DATA_PATH }} \
+          -destination 'platform=iOS Simulator,name=${{ env.SIMULATOR_NAME }},OS=${{ env.SIMULATOR_VERSION }}' \
+          -resultBundlePath ./TestResults.xcresult \
+          CODE_SIGNING_ALLOWED='NO' \
+          | xcbeautify --renderer github-actions
 
       - name: Generate Allure files
         run: |
