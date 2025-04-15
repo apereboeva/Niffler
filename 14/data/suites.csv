@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Apr 15 07:06:29 GMT 2025","Tue Apr 15 07:06:59 GMT 2025","29757","","E2EUITests","","","","testAddSpend()",""
+"failed","Tue Apr 15 07:05:59 GMT 2025","Tue Apr 15 07:06:28 GMT 2025","29155","","E2EUITests","","","","testRegistrationSuccess()",""
+"passed","Tue Apr 15 07:06:59 GMT 2025","Tue Apr 15 07:07:25 GMT 2025","26232","","E2EUITests","","","","testCheckAddingUpSpends()",""
+"passed","Tue Apr 15 07:05:01 GMT 2025","Tue Apr 15 07:05:34 GMT 2025","32977","","E2EUITests","","","","Открытие ссылки - matthewfetcher.com","Логин успешен"
+"passed","Tue Apr 15 07:05:34 GMT 2025","Tue Apr 15 07:05:59 GMT 2025","24569","","E2EUITests","","","","testRegistrationFailure()",""
+"passed","Tue Apr 15 07:07:26 GMT 2025","Tue Apr 15 07:07:53 GMT 2025","27254","","E2EUITests","","","","testEditSpend()",""
+"passed","Tue Apr 15 07:04:12 GMT 2025","Tue Apr 15 07:05:01 GMT 2025","48583","","E2EUITests","","","","testLoginFailure()",""
