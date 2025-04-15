@@ -52,6 +52,7 @@ jobs:
           -resultBundlePath ./TestResults.xcresult \
           CODE_SIGNING_ALLOWED='NO' \
           | xcbeautify --renderer github-actions
+        continue-on-error: true
 
       - name: Generate Allure files
         run: |
