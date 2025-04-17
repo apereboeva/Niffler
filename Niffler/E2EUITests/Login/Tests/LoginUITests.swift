@@ -40,13 +40,9 @@ final class LoginUITests: TestCase {
             .assertIsLoginErrorShown()
     }
     
-//    func testGoLoginFromRegistrationScreen() throws {
-//        
-//        launchAppWithoutLogin()
-//        
-//        loginPage
-//            .openRegistrationScreen()
-//        registrationPage
-//            .
-//    }
+    func testGoLoginFromRegistrationScreen() throws {
+        
+        launchAppWithoutLogin()
+        XCTFail("Failed")
+    }
 }

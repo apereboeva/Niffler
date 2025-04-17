@@ -68,7 +68,14 @@ jobs:
           path: |
             allure-results/
           retention-days: 1
-
+          
+      - name: Upload XCResult
+        uses: actions/upload-artifact@v4
+        with:
+          name: TestResults
+          path: ./TestResults.xcresult
+          retention-days: 1
+          
   report:
     runs-on: [ubuntu-latest]
     name: Report to Allure
@@ -103,3 +110,31 @@ jobs:
           github_token: ${{ secrets.TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
+          
+  notification:
+    runs-on: macos-15
+    needs: test
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: TestResults
+          path: ./TestResults.xcresult
+
+      - name: Parse and send results to Telegram
+        run: |
+          xcrun xcresulttool get --path ./TestResults.xcresult --format json --legacy > result.json
+          total=$(jq -r '.metrics.testsCount._value' result.json)
+          failed=$(jq -r '.metrics.testsFailedCount._value' result.json)
+          skipped=$(jq -r '.metrics.testsSkippedCount._value' result.json)
+          passed=$((total - failed - skipped))
+
+          TEXT="*🧪 Результаты тестов:*
+          ✅ Успешных: $passed
+          ❌ Упавших: $failed
+          ⏭ Пропущенных: $skipped
+          📊 Всего: $total"
+
+          curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendMessage \
+            -d chat_id=273824728 \
+            -d text="$TEXT"
