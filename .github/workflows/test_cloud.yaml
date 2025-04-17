@@ -135,4 +135,4 @@ jobs:
           
           echo "$TEXT"
 
-          curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_TOKEN }}/sendMessage -d chat_id=273824728 -d text="$TEXT"
+          curl -s -X POST https://api.telegram.org/bot7984906836:AAF2qXhlV5Qz9R31hBMhcqakBLAlpd01Eqg/sendMessage -d chat_id=273824728 -d text="$TEXT"
