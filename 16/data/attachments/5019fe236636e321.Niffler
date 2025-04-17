@@ -1,0 +1,50 @@
+Application, 0x103424cc0, pid: 9625, label: 'NifflerApp' <App element pid: 9625>
+  Window (Main), 0x103422670, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 9625, elementOrHash.elementID: 4317272928.4>
+    Other, 0x10342b570, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 9625, elementOrHash.elementID: 4318075392.5>
+      Other, 0x10342b690, {{16.0, 59.0}, {361.0, 782.6}} <AX element pid: 9625, elementOrHash.elementID: 4317586752.6>
+        Other, 0x10342b7b0, {{-345.0, -723.6}, {1083.0, 2347.9}} <AX element pid: 9625, elementOrHash.elementID: 4317743760.29>
+        Other, 0x1034214b0, {{16.0, 59.0}, {361.0, 782.6}} <AX element pid: 9625, elementOrHash.elementID: 4318095760.7>
+          Other, 0x103428b70, {{16.0, 59.0}, {361.0, 782.6}} <AX element pid: 9625, elementOrHash.elementID: 105553169802464.8>
+            Other, 0x1034274d0, {{16.0, 59.0}, {361.0, 782.6}} <AX element pid: 9625, elementOrHash.elementID: 4319199456.9>
+              Other, 0x1034275f0, {{16.0, 59.0}, {361.0, 782.6}} <AX element pid: 9625, elementOrHash.elementID: 4319200432.10>
+                Other, 0x103427710, {{16.0, 59.0}, {361.0, 782.6}} <AX element pid: 9625, elementOrHash.elementID: 4318218576.11>
+                  Other, 0x103427830, {{16.0, 59.0}, {361.0, 782.6}} <AX element pid: 9625, elementOrHash.elementID: 4318154912.12>
+                    Other, 0x103427950, {{16.0, 59.0}, {361.0, 782.6}} <AX element pid: 9625, elementOrHash.elementID: 4317448688.13>
+                      Other, 0x103427a70, {{16.0, 59.0}, {361.0, 782.6}} <AX element pid: 9625, elementOrHash.elementID: 4319290336.14>
+                        Other, 0x103427b90, {{16.0, 59.0}, {361.0, 782.6}} <AX element pid: 9625, elementOrHash.elementID: 105553169800064.15>
+                          Image, 0x103427cb0, {{133.6, 183.3}, {44.1, 43.8}}, label: 'LogoNiffler' <AX element pid: 9625, elementOrHash.elementID: 105553169766976.16>
+                          StaticText, 0x103550970, {{185.0, 189.6}, {74.4, 31.2}}, label: 'Niffler' <AX element pid: 9625, elementOrHash.elementID: 105553169795424.17>
+                          StaticText, 0x103553f00, {{128.7, 249.8}, {135.6, 62.5}}, label: 'Log in' <AX element pid: 9625, elementOrHash.elementID: 105553169797824.18>
+                          StaticText, 0x1035513a0, {{30.7, 362.6}, {72.0, 18.7}}, label: 'Username' <AX element pid: 9625, elementOrHash.elementID: 105553169798144.19>
+                          TextField, 0x1030bceb0, {{30.7, 390.9}, {331.6, 49.6}}, identifier: 'userNameTextField', placeholderValue: 'Type your username', value: 85655386 <AX element pid: 9625, elementOrHash.elementID: 4329489408.20>
+                          StaticText, 0x103066100, {{30.7, 464.9}, {67.4, 18.7}}, label: 'Password' <AX element pid: 9625, elementOrHash.elementID: 105553169798784.21>
+                          SecureTextField, 0x103034290, {{45.4, 509.7}, {302.2, 18.7}}, identifier: 'passwordTextField', placeholderValue: 'Type your password', value: • <AX element pid: 9625, elementOrHash.elementID: 4337635328.22>
+                          Button, 0x103066b90, {{325.6, 508.2}, {22.0, 22.0}}, identifier: 'passwordTextField', label: 'ic_show_hide' <AX element pid: 9625, elementOrHash.elementID: 105553169797664.23>
+                          Button, 0x1030652e0, {{34.4, 585.3}, {324.3, 48.1}}, identifier: 'loginButton', label: 'Log in' <AX element pid: 9625, elementOrHash.elementID: 105553169799584.24>
+                          StaticText, 0x103069900, {{30.7, 677.8}, {331.6, 48.1}}, identifier: 'createAccountButton', label: 'Create new account' <AX element pid: 9625, elementOrHash.elementID: 105553169799904.25>
+    Other, 0x1030659c0, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 9625, elementOrHash.elementID: 4318401104.26>
+      Other, 0x103066f10, {{-393.0, -852.0}, {1179.0, 2556.0}} <AX element pid: 9625, elementOrHash.elementID: 4317743232.27>
+      Other, 0x103066480, {{0.0, 69.0}, {393.0, 783.0}} <AX element pid: 9625, elementOrHash.elementID: 4318408176.28>
+        Other, 0x103067290, {{0.0, 69.0}, {393.0, 783.0}} <AX element pid: 9625, elementOrHash.elementID: 4318410336.30>
+          Other, 0x103069240, {{0.0, 69.0}, {393.0, 783.0}} <AX element pid: 9625, elementOrHash.elementID: 4318411056.31>
+            Other, 0x103034a40, {{0.0, 69.0}, {393.0, 783.0}} <AX element pid: 9625, elementOrHash.elementID: 4317731024.32>
+              Other, 0x1030695b0, {{0.0, 69.0}, {393.0, 783.0}} <AX element pid: 9625, elementOrHash.elementID: 105553169771296.33>
+                Image, 0x103066820, {{128.0, 136.3}, {48.0, 47.3}}, label: 'LogoNiffler' <AX element pid: 9625, elementOrHash.elementID: 105553169766816.34>
+                StaticText, 0x103067d30, {{184.0, 143.0}, {81.0, 34.0}}, label: 'Niffler' <AX element pid: 9625, elementOrHash.elementID: 105553169767776.35>
+                StaticText, 0x103069c50, {{101.3, 208.6}, {190.3, 68.0}}, label: 'Sign Up' <AX element pid: 9625, elementOrHash.elementID: 105553169769696.36>
+                StaticText, 0x1030683e0, {{72.0, 278.6}, {195.0, 20.3}}, label: 'Already have an account?' <AX element pid: 9625, elementOrHash.elementID: 105553169770016.37>
+                StaticText, 0x103065640, {{275.0, 278.6}, {46.0, 20.3}}, label: 'Log in' <AX element pid: 9625, elementOrHash.elementID: 105553169767456.38>
+                StaticText, 0x103067600, {{16.0, 325.5}, {78.3, 20.3}}, label: 'Username' <AX element pid: 9625, elementOrHash.elementID: 105553169769216.39>
+                TextField, 0x103068090, {{16.0, 356.7}, {361.0, 54.0}}, identifier: 'userNameSignUpTextField', placeholderValue: 'Type your username', value: 85655386 <AX element pid: 9625, elementOrHash.elementID: 4320387072.40>
+                StaticText, 0x103069fc0, {{16.0, 437.0}, {73.3, 20.3}}, label: 'Password' <AX element pid: 9625, elementOrHash.elementID: 105553169769536.41>
+                SecureTextField, 0x10306a330, {{32.0, 485.0}, {329.0, 22.0}}, identifier: 'passwordSignUpTextField', placeholderValue: 'Type your password', value: • <AX element pid: 9625, elementOrHash.elementID: 4321172992.42>
+                Button, 0x10306a680, {{337.0, 484.0}, {24.0, 24.0}}, identifier: 'passwordSignUpTextField', label: 'ic_show_hide' <AX element pid: 9625, elementOrHash.elementID: 105553169770496.43>
+                StaticText, 0x10306a9f0, {{16.0, 550.4}, {138.7, 20.3}}, label: 'Confirm password' <AX element pid: 9625, elementOrHash.elementID: 105553169770656.44>
+                SecureTextField, 0x10306ad50, {{32.0, 598.3}, {329.0, 22.0}}, identifier: 'confirmPasswordTextField', placeholderValue: 'Type your password', value: • <AX element pid: 9625, elementOrHash.elementID: 4320760832.45>
+                Button, 0x10306b0b0, {{337.0, 597.3}, {24.0, 24.0}}, identifier: 'confirmPasswordTextField', label: 'ic_show_hide' <AX element pid: 9625, elementOrHash.elementID: 105553169770976.46>
+                Button, 0x10306b410, {{20.0, 681.3}, {353.0, 52.3}}, identifier: 'signUpButton', label: 'Sign Up', Disabled <AX element pid: 9625, elementOrHash.elementID: 105553169820288.140>
+                StaticText, 0x10306b770, {{103.5, 737.7}, {186.0, 13.3}}, identifier: 'LoginError', label: 'Не удалось создать пользователя' <AX element pid: 9625, elementOrHash.elementID: 105553169820928.141>
+  Window, 0x10306bb10, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 9625, elementOrHash.elementID: 4321344000.48>
+    Other, 0x10306beb0, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 9625, elementOrHash.elementID: 4318530832.50>
+      Other, 0x10306c240, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 9625, elementOrHash.elementID: 4317769168.52>
+      Other, 0x10306c5c0, {{0.0, 852.0}, {393.0, 233.0}} <AX element pid: 9625, elementOrHash.elementID: 4318535232.53>
