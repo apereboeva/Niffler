@@ -1,0 +1,28 @@
+Application, 0x101e5e7e0, pid: 12765, label: 'NifflerApp' <App element pid: 12765>
+  Window (Main), 0x101e60880, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 12765, elementOrHash.elementID: 4375869424.4>
+    Other, 0x101e5f600, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 12765, elementOrHash.elementID: 4374777440.5>
+      Other, 0x101e5e450, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 12765, elementOrHash.elementID: 4373879360.6>
+        Other, 0x101e5f9a0, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 12765, elementOrHash.elementID: 4375023024.7>
+          Other, 0x101e5eee0, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 12765, elementOrHash.elementID: 105553169793824.8>
+            Other, 0x101e5eb60, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 12765, elementOrHash.elementID: 4373797264.9>
+              Other, 0x101e5f270, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 12765, elementOrHash.elementID: 4375885424.10>
+                Other, 0x101e60f50, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 12765, elementOrHash.elementID: 4374722448.11>
+                  Other, 0x101e60500, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 12765, elementOrHash.elementID: 4375018064.12>
+                    Other, 0x101d48a30, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 12765, elementOrHash.elementID: 4373790576.13>
+                      Other, 0x101d51800, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 12765, elementOrHash.elementID: 4375075296.14>
+                        Other, 0x101d51920, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 12765, elementOrHash.elementID: 105553169750912.15>
+                          Image, 0x101d51a40, {{128.0, 127.3}, {48.0, 47.7}}, label: 'LogoNiffler' <AX element pid: 12765, elementOrHash.elementID: 105553169810048.16>
+                          StaticText, 0x101d51b60, {{184.0, 134.1}, {81.0, 34.0}}, label: 'Niffler' <AX element pid: 12765, elementOrHash.elementID: 105553169811008.17>
+                          StaticText, 0x101d51c80, {{122.7, 199.7}, {147.7, 68.0}}, label: 'Log in' <AX element pid: 12765, elementOrHash.elementID: 105553169811168.18>
+                          StaticText, 0x101d51da0, {{16.0, 322.5}, {78.3, 20.3}}, label: 'Username' <AX element pid: 12765, elementOrHash.elementID: 105553169811808.19>
+                          TextField, 0x101d51ec0, {{16.0, 353.3}, {361.0, 54.0}}, identifier: 'userNameTextField', placeholderValue: 'Type your username', value: stage <AX element pid: 12765, elementOrHash.elementID: 4379414016.20>
+                          StaticText, 0x101d48c70, {{16.0, 433.9}, {73.3, 20.3}}, label: 'Password' <AX element pid: 12765, elementOrHash.elementID: 105553169811488.21>
+                          SecureTextField, 0x101d48d90, {{32.0, 482.0}, {329.0, 22.0}}, identifier: 'passwordTextField', placeholderValue: 'Type your password', value: ••••• <AX element pid: 12765, elementOrHash.elementID: 4388259840.22>
+                          Button, 0x101d48eb0, {{337.0, 481.0}, {24.0, 24.0}}, identifier: 'passwordTextField', label: 'ic_show_hide' <AX element pid: 12765, elementOrHash.elementID: 105553169812128.23>
+                          Button, 0x101d48fd0, {{20.0, 565.0}, {353.0, 52.3}}, identifier: 'loginButton', label: 'Log in' <AX element pid: 12765, elementOrHash.elementID: 105553169834912.129>
+                          StaticText, 0x101d490f0, {{49.3, 621.2}, {294.3, 13.3}}, identifier: 'LoginError', label: 'Нет такого пользователя. Попробуйте другие данные' <AX element pid: 12765, elementOrHash.elementID: 105553169829952.130>
+                          StaticText, 0x101d49210, {{16.0, 681.7}, {361.0, 52.3}}, identifier: 'createAccountButton', label: 'Create new account' <AX element pid: 12765, elementOrHash.elementID: 105553169750752.25>
+  Window, 0x101d49330, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 12765, elementOrHash.elementID: 4379666944.26>
+    Other, 0x101d49450, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 12765, elementOrHash.elementID: 4376110672.28>
+      Other, 0x101d49570, {{0.0, 0.0}, {393.0, 852.0}} <AX element pid: 12765, elementOrHash.elementID: 4376151536.30>
+      Other, 0x101d49690, {{0.0, 852.0}, {393.0, 233.0}} <AX element pid: 12765, elementOrHash.elementID: 4376143264.31>
