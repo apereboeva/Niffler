@@ -1,0 +1,5 @@
+Query chain:
+ →Find: Target Application 'com.qaGuru.Niffler'
+  ↪︎Find: Descendants matching type ScrollView
+    ↪︎Find: Descendants matching type Switch
+      ↪︎Find: Element at index 0
