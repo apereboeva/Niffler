@@ -1,0 +1,7 @@
+Query chain:
+ →Find: Target Application 'com.qaGuru.Niffler'
+  ↪︎Find: First Match
+    ↪︎Find: Descendants matching type ScrollView
+      ↪︎Find: First Match
+        ↪︎Find: Descendants matching type Switch
+          ↪︎Find: First Match
